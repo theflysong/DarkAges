@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "zyz",
+    "yxy",
+    "zyz"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:nether_star"
+    },
+    "y":
+    {
+      "type": "forge:ore_dict",
+      "ore": "gemDiamond"
+    },
+    "z":
+    {
+      "item": "darkages:Crystal"
+    }
+  },
+  "result":
+  {
+    "item": "darkages:Core_Altar",
+    "count": 1
+  }
+}

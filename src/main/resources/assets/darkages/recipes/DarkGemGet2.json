@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "y y",
+    " x ",
+    "y y"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "darkages:Magic_Core"
+    },
+    "y":
+    {
+      "type": "forge:ore_dict",
+      "ore": "blockCoal"
+    }
+  },
+  "result":
+  {
+    "item": "darkages:Dark_Gem",
+    "count": 1
+  }
+}

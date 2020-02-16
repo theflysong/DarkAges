@@ -1,0 +1,30 @@
+item.darkGem.name=Dark Gem
+item.deadGem.name=DeadGem
+item.crystal.name=Crystal
+item.unfiredCrystal.name=Unfired Crystal
+item.darkCore.name=Dark Core
+item.deadCore.name=Dead Core
+item.lifeGem.name=Life Gem
+item.lifeCore.name-Life Core
+item.magicGem.name=Magic Gem
+item.magicCore.name=Magic Core
+
+tile.crystalOre.name=Crystal Ore
+tile.coreAltar.name=Core Altar
+
+itemGroup.darkAges:Gem=DarkAges:Gem
+itemGroup.darkAges:Material=DarkAges:Material
+itemGroup.darkAges:Ore=DarkAges:Ore
+itemGroup.darkAges:FunctionalityBlock=DarkAges:FunctionalityBlock
+
+energy.message.1=energy number:
+energy.message.2=You don't have enough energy.
+
+item.darkGem.message.1=Deep dark...
+item.darkGem.message.2=You get the Coal.
+item.deadGem.message.1=The smell of death is in the air....
+item.deadGem.message.2=You get the Wither_Skeleton's Skull..
+item.lifeGem.message.1=You think the life is beating in it.
+item.lifeGem.message.2=You think you're healthier.
+item.magicGem.message.1=The magic is beating in it.
+item.magicGem.message.2=You get the Unfired Crystal.

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    " y ",
+    "yxy",
+    " y "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "darkages:Magic_Core"
+    },
+    "y":
+    {
+      "item": "minecraft:dye",
+      "data": 0
+    }
+  },
+  "result":
+  {
+    "item": "darkages:Dark_Gem",
+    "count": 1
+  }
+}

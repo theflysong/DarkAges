@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "darkages:crystal"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "gemDiamond"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "gemDiamond"
+    },
+    {
+      "item": "minecraft:nether_star"
+    },
+    {
+      "item": "minecraft:gold_nugget"
+    }
+  ],
+  "result": {
+    "item": "darkages:magic_gem"
+  }
+}

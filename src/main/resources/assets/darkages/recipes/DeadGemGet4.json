@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "mirror":true,
+  "pattern":
+  [
+    " p ",
+    "yza",
+    " x "
+  ],
+  "key":
+  {
+    "a":
+    {
+      "type": "forge:ore_dict",
+      "ore": "gemLapis"
+    },
+    "x":
+    {
+      "item": "minecraft:bone"
+    },
+    "p":
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    "y":
+    {
+      "type": "forge:ore_dict",
+      "ore": "gemDiamond"
+    },
+    "z":
+    {
+      "item": "darkages:Dark_Core"
+    }
+  },
+  "result":
+  {
+    "item": "darkages:Dead_Gem",
+    "count": 1
+  }
+}

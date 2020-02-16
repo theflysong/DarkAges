@@ -1,0 +1,11 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "up": "darkages:blocks/core_altar_up",
+        "down": "darkages:blocks/core_altar_down",
+        "north": "darkages:blocks/core_altar_wall",
+        "east": "darkages:blocks/core_altar_wall",
+        "south": "darkages:blocks/core_altar_wall",
+        "west": "darkages:blocks/core_altar_wall"
+    }
+}

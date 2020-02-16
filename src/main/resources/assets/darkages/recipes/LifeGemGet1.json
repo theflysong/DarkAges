@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "mirror":true,
+  "pattern":
+  [
+    " x ",
+    "yza",
+    " p "
+  ],
+  "key":
+  {
+    "a":
+    {
+      "type": "forge:ore_dict",
+      "ore": "gemLapis"
+    },
+    "x":
+    {
+      "item": "minecraft:sugar"
+    },
+    "p":
+    {
+      "item": "minecraft:cooked_chicken"
+    },
+    "y":
+    {
+      "type": "forge:ore_dict",
+      "ore": "gemDiamond"
+    },
+    "z":
+    {
+      "item": "darkages:Dark_Core"
+    }
+  },
+  "result":
+  {
+    "item": "darkages:Life_Gem",
+    "count": 1
+  }
+}
