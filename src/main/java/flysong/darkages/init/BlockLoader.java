@@ -14,11 +14,11 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber(modid = DarkAges.MODID)
 public class BlockLoader {
 
-    public static final Block CrystalOre = new BasicOre(Material.ROCK,SoundType.STONE,"crystalOre","Crystal_Ore").setItemDropped(ItemLoader.UnfiredCrystal,2,7,19).setDigLevel("pickaxe",2).setHardness(10.5F).setCreativeTab(CTLoader.DarkAgesBlock);
+    public static final Block CrystalOre = new BlockCrystalOre();
     public static final Block CoreAltar = new BlockCoreAltar();
     public static final Block EnergyBlock = new BasicBlock(Material.ROCK,SoundType.STONE,"energyBlock","Energy_block").setDigLevel("pickaxe",3).setCreativeTab(CTLoader.DarkAgesBlock).setHardness(12.0F);
 
-    public static final Block EnergyOre = new BasicOre(Material.ROCK,SoundType.STONE,"energyOre","Energy_Ore").setDigLevel("pickaxe",3).setCreativeTab(CTLoader.DarkAgesBlock).setHardness(20.5F);
+    public static final Block EnergyOre = new BasicBlock(Material.ROCK,SoundType.STONE,"energyOre","Energy_Ore").setDigLevel("pickaxe",3).setCreativeTab(CTLoader.DarkAgesBlock).setHardness(20.5F);
 
     public BlockLoader(){
         MinecraftForge.EVENT_BUS.register(this);
