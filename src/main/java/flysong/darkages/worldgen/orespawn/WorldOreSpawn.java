@@ -11,13 +11,20 @@ import java.util.Random;
 
 public class WorldOreSpawn extends WorldGenerator {
     private int MaxY;
-    private int SpawnNumber;
+    private int SpawnTime;
+    private int AddTime;
     private WorldGenMinable Generator;
 
-    public WorldOreSpawn(int MaxY, int SpawnNumber, WorldGenMinable Generator)
+    public WorldOreSpawn(int MaxY, int SpawnTime,WorldGenMinable Generator)
+    {
+        this(MaxY,SpawnTime,1,Generator);
+    }
+
+    public WorldOreSpawn(int MaxY, int SpawnTime, int AddTime,WorldGenMinable Generator)
     {
         this.MaxY=MaxY;
-        this.SpawnNumber=SpawnNumber;
+        this.SpawnTime=SpawnTime;
+        this.AddTime=AddTime;
         this.Generator=Generator;
     }
 
@@ -25,9 +32,9 @@ public class WorldOreSpawn extends WorldGenerator {
     public boolean generate(World worldIn, Random rand, BlockPos position) {
         if (TerrainGen.generateOre(worldIn, rand, this, position, OreGenEvent.GenerateMinable.EventType.CUSTOM))
         {
-            if(SpawnNumber>=0)
+            if(SpawnTime>=0)
             {
-                for (int i = 0; i < SpawnNumber; ++i)
+                for (int i = 0; i < SpawnTime; i+=AddTime)
                 {
                     int posX = position.getX() + rand.nextInt(16);
                     int posY = rand.nextInt(MaxY-4)+4;
@@ -38,7 +45,7 @@ public class WorldOreSpawn extends WorldGenerator {
             }
             else
             {
-                if(rand.nextInt(-SpawnNumber)==0)
+                if(rand.nextInt(-SpawnTime)<=AddTime)
                 {
                     int posX = position.getX() + rand.nextInt(16);
                     int posY = rand.nextInt(MaxY-4)+4;
