@@ -18,9 +18,9 @@ public class BasicOre extends BasicBlock {
     private int ExpMin;
     private int ExpMax;
 
-    public BasicOre(Material material,SoundType soundType)
+    public BasicOre(Material material,SoundType soundType,String UnName,String REName)
     {
-        super(material,soundType);
+        super(material,soundType,UnName,REName);
     }
 
     public BasicOre setItemDropped(Item ItemDropped,int num,int ExpMin,int ExpMax)

@@ -6,10 +6,12 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 
 public class BasicBlock extends Block {
-    public BasicBlock(Material material,SoundType soundType)
+    public BasicBlock(Material material,SoundType soundType,String UnName,String REName)
     {
         super(material);
         this.setSoundType(soundType);
+        this.setUnlocalizedName(UnName);
+        this.setRegistryName(REName);
     }
 
     public BasicBlock setDigLevel(String toolClass,int Level)
