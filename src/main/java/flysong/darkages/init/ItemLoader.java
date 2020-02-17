@@ -3,6 +3,7 @@ package flysong.darkages.init;
 import flysong.darkages.DarkAges;
 import flysong.darkages.Modlog;
 import flysong.darkages.item.Gem.*;
+import flysong.darkages.item.ToolAndWeapon.ItemEnergyAxe;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,6 +34,8 @@ public class ItemLoader {
     public static final Item ItemEnergyBlock = new ItemBlock(BlockLoader.EnergyBlock).setRegistryName(BlockLoader.EnergyBlock.getRegistryName());
     public static final Item ItemEnergyOre = new ItemBlock(BlockLoader.EnergyOre).setRegistryName(BlockLoader.EnergyOre.getRegistryName());
 
+    public static final Item EnergyAxe = new ItemEnergyAxe();
+
     public ItemLoader(){
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -40,7 +43,7 @@ public class ItemLoader {
     @SubscribeEvent
     public static void Loader(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(Crystal,UnfiredCrystal,DarkGem,DarkCore,DeadGem,DeadCore,LifeGem,LifeCore,MagicGem,
-                MagicCore,ItemCrystalOre,ItemCoreAltar,EnergyIngot,EnergyNugget,ItemEnergyBlock,ItemEnergyOre);
+                MagicCore,ItemCrystalOre,ItemCoreAltar,EnergyIngot,EnergyNugget,ItemEnergyBlock,ItemEnergyOre,EnergyAxe);
         Modlog.logger.info("Item is reg");
     }
 }

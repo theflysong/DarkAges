@@ -9,13 +9,13 @@ public class CTLoader {
     public static CreativeTabs DarkAgesGem;
     public static CreativeTabs DarkAgesMater;
     public static CreativeTabs DarkAgesBlock;
-    public static CreativeTabs DarkAgesFunctionalityBlock;
+    public static CreativeTabs DarkAgesToolAndWeapon;
 
     public CTLoader(FMLPreInitializationEvent event) {
         DarkAgesGem = new CTDarkAgesGem();
         DarkAgesMater = new CTDarkAgesMater();
         DarkAgesBlock = new CTDarkAgesBlock();
-        DarkAgesFunctionalityBlock = new CTDarkAgesFunctionalityBlock();
+        DarkAgesToolAndWeapon = new CTDarkAgesToolAndWeapon();
         Modlog.logger.info("CT is load.");
     }
 }

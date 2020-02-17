@@ -27,7 +27,7 @@ public class BlockCoreAltar extends Block {
         this.setHarvestLevel("pickaxe", 3);
         this.setUnlocalizedName("coreAltar");
         this.setRegistryName("Core_Altar");
-        this.setCreativeTab(CTLoader.DarkAgesFunctionalityBlock);
+        this.setCreativeTab(CTLoader.DarkAgesBlock);
         this.setLightLevel(1.0F);
     }
 
