@@ -1,4 +1,4 @@
-package flysong.darkages.item;
+package flysong.darkages.item.Gem;
 
 import flysong.darkages.init.CTLoader;
 import net.minecraft.client.Minecraft;

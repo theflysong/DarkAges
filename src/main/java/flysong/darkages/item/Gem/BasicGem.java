@@ -1,4 +1,4 @@
-package flysong.darkages.item;
+package flysong.darkages.item.Gem;
 
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;

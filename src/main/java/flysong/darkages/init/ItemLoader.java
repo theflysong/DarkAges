@@ -2,7 +2,7 @@ package flysong.darkages.init;
 
 import flysong.darkages.DarkAges;
 import flysong.darkages.Modlog;
-import flysong.darkages.item.*;
+import flysong.darkages.item.Gem.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.common.MinecraftForge;
