@@ -5,9 +5,10 @@ import flysong.darkages.init.ToolMaterialLoader;
 import net.minecraft.item.ItemAxe;
 
 public class ItemEnergyAxe extends ItemAxe {
+
     public ItemEnergyAxe()
     {
-        super(ToolMaterial.DIAMOND);
+        super(ToolMaterialLoader.ENERGY);
         this.setUnlocalizedName("energyAxe");
         this.setRegistryName("Energy_Axe");
         this.setCreativeTab(CTLoader.DarkAgesToolAndWeapon);
