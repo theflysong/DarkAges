@@ -8,14 +8,22 @@ item.lifeGem.name=Life Gem
 item.lifeCore.name-Life Core
 item.magicGem.name=Magic Gem
 item.magicCore.name=Magic Core
+item.energyAxe.name=Energy Axe
+item.energyPickaxe.name=Energy Pickaxe
+item.energyShovel.name=Energy Shovel
+item.energySword.name=Energy Sword
+item.energyIngot.name=Energy Ingot
+item.energyNugget.name=Energy Nugget
 
 tile.crystalOre.name=Crystal Ore
 tile.coreAltar.name=Core Altar
+tile.energyOre.name=Energy Ore
+tile.energyBlock.name=Energy Block
 
 itemGroup.darkAges:Gem=DarkAges:Gem
 itemGroup.darkAges:Material=DarkAges:Material
-itemGroup.darkAges:Ore=DarkAges:Ore
-itemGroup.darkAges:FunctionalityBlock=DarkAges:FunctionalityBlock
+itemGroup.darkAges:Block=DarkAges:Block
+itemGroup.darkAges:ToolAndWeapon=DarkAges:Tool&Weapon
 
 energy.message.1=energy number:
 energy.message.2=You don't have enough energy.

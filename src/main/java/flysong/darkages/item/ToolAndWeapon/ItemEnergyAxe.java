@@ -1,15 +1,15 @@
 package flysong.darkages.item.ToolAndWeapon;
 
 import flysong.darkages.init.CTLoader;
-import net.minecraft.item.ItemAxe;
-
 import flysong.darkages.init.ToolMaterialLoader;
+import net.minecraft.item.ItemAxe;
 
 public class ItemEnergyAxe extends ItemAxe {
     public ItemEnergyAxe()
     {
-        super(ToolMaterialLoader.ENERGY);
+        super(ToolMaterial.DIAMOND);
         this.setUnlocalizedName("energyAxe");
+        this.setRegistryName("Energy_Axe");
         this.setCreativeTab(CTLoader.DarkAgesToolAndWeapon);
     }
 }
