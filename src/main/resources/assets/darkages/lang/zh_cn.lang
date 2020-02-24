@@ -8,11 +8,12 @@ item.lifeGem.name=生命宝石
 item.lifeCore.name=生命核心
 item.magicGem.name=魔法宝石
 item.magicCore.name=魔法核心
-item.energyAxe.name=能力斧
+item.energyAxe.name=能量斧
 item.energyPickaxe.name=能量镐
 item.energyShovel.name=能量铲
 item.energySword.name=能量剑
 item.energyIngot.name=能量锭
+item.energyHoe.name=能量锄
 item.energyNugget.name=能量粒
 
 tile.crystalOre.name=结晶体矿石

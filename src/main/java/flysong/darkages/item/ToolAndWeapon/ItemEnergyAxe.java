@@ -22,7 +22,7 @@ public class ItemEnergyAxe extends ItemAxe {
         this.setCreativeTab(CTLoader.DarkAgesToolAndWeapon);
     }
 
-    private int AddDamageNum = 7;
+    private int AddDamageNum = 39;
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {

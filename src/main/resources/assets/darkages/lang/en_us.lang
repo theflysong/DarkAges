@@ -13,6 +13,7 @@ item.energyPickaxe.name=Energy Pickaxe
 item.energyShovel.name=Energy Shovel
 item.energySword.name=Energy Sword
 item.energyIngot.name=Energy Ingot
+item.energyHoe.name=Energy Hoe
 item.energyNugget.name=Energy Nugget
 
 tile.crystalOre.name=Crystal Ore

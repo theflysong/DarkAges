@@ -21,7 +21,7 @@ public class ItemEnergyPickaxe extends ItemPickaxe {
         this.setRegistryName("Energy_Pickaxe");
         this.setCreativeTab(CTLoader.DarkAgesToolAndWeapon);
     }
-    private int AddDamageNum = 7;
+    private int AddDamageNum = 3;
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
