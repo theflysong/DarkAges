@@ -30,7 +30,7 @@ public class ItemEnergyPickaxe extends ItemPickaxe {
         {
             return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
         }
-        stack.setItemDamage(stack.getMaxDamage());
+        stack.setItemDamage(0);
         playerIn.addPotionEffect(new PotionEffect(MobEffects.HASTE,120));
         AddDamageNum--;
         return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);

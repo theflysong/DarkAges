@@ -22,7 +22,7 @@ public class ItemEnergyAxe extends ItemAxe {
         this.setCreativeTab(CTLoader.DarkAgesToolAndWeapon);
     }
 
-    private int AddDamageNum = 39;
+    private int AddDamageNum = 3;
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
@@ -31,7 +31,7 @@ public class ItemEnergyAxe extends ItemAxe {
         {
             return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
         }
-        stack.setItemDamage(stack.getMaxDamage());
+        stack.setItemDamage(0);
         playerIn.addPotionEffect(new PotionEffect(MobEffects.HASTE,120));
         AddDamageNum--;
         return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
