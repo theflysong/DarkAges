@@ -5,20 +5,20 @@ import flysong.darkages.init.ToolMaterialLoader;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
-import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 
-public class ItemEnergyAxe extends ItemAxe {
-    public ItemEnergyAxe()
+public class ItemEnergySword extends ItemSword {
+    public ItemEnergySword()
     {
-        super(ToolMaterialLoader.ENERGY,ToolMaterialLoader.ENERGY.getAttackDamage()+2,1);
-        this.setUnlocalizedName("energyAxe");
-        this.setRegistryName("Energy_Axe");
+        super(ToolMaterialLoader.ENERGY);
+        this.setUnlocalizedName("energySword");
+        this.setRegistryName("Energy_Sword");
         this.setCreativeTab(CTLoader.DarkAgesToolAndWeapon);
     }
 
@@ -32,7 +32,7 @@ public class ItemEnergyAxe extends ItemAxe {
             return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
         }
         stack.setItemDamage(stack.getMaxDamage());
-        playerIn.addPotionEffect(new PotionEffect(MobEffects.HASTE,120));
+        playerIn.addPotionEffect(new PotionEffect(MobEffects.STRENGTH,120));
         AddDamageNum--;
         return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
     }

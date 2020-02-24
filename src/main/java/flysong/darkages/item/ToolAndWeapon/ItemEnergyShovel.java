@@ -5,7 +5,7 @@ import flysong.darkages.init.ToolMaterialLoader;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
-import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
@@ -13,12 +13,12 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 
-public class ItemEnergyAxe extends ItemAxe {
-    public ItemEnergyAxe()
+public class ItemEnergyShovel extends ItemSpade {
+    public ItemEnergyShovel()
     {
-        super(ToolMaterialLoader.ENERGY,ToolMaterialLoader.ENERGY.getAttackDamage()+2,1);
-        this.setUnlocalizedName("energyAxe");
-        this.setRegistryName("Energy_Axe");
+        super(ToolMaterialLoader.ENERGY);
+        this.setUnlocalizedName("energyShovel");
+        this.setRegistryName("Energy_Shovel");
         this.setCreativeTab(CTLoader.DarkAgesToolAndWeapon);
     }
 
