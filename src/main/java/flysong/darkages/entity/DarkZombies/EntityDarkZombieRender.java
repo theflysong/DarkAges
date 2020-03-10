@@ -18,7 +18,7 @@ public class EntityDarkZombieRender extends RenderLiving<EntityDarkZombies> {
     @Override
     protected void preRenderCallback(EntityDarkZombies entity, float partialTickTime)
     {
-        GlStateManager.scale(1.5F, 1.5F, 1.5F);
+        GlStateManager.scale(1.2F, 1.2F, 1.2F);
     }
 
     @Override
