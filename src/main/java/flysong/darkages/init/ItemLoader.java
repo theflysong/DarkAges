@@ -25,6 +25,8 @@ public class ItemLoader {
     public static final Item EnergyNugget = new Item().setUnlocalizedName("energyNugget").setRegistryName("Energy_Nugget").setCreativeTab(DarkAgesMater);
     public static final Item DarkDust = new Item().setUnlocalizedName("darkDust").setRegistryName("Dark_Dust").setCreativeTab(DarkAgesMater);
     public static final Item DarkPower = new Item().setUnlocalizedName("darkPower").setRegistryName("Dark_Power").setCreativeTab(DarkAgesMater);
+    public static final Item ChaosPower = new Item().setUnlocalizedName("chaosPower").setRegistryName("Chaos_Power").setCreativeTab(DarkAgesMater);
+    public static final Item Entropy = new Item().setUnlocalizedName("entropy").setRegistryName("Entropy").setCreativeTab(DarkAgesMater);
 
     public static final Item DarkGem = new ItemDarkGem();
     public static final Item DeadGem = new ItemDeadGem();
@@ -54,7 +56,8 @@ public class ItemLoader {
     public static void Loader(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(Crystal,UnfiredCrystal,DarkGem,DarkCore,DeadGem,DeadCore,LifeGem,LifeCore, MagicGem, MagicCore,
                 ItemCrystalOre,ItemCoreAltar,EnergyIngot,EnergyNugget,ItemEnergyBlock, ItemEnergyOre,EnergyAxe,EnergySword,EnergyHoe,
-                EnergyShovel,EnergyPickaxe,EnergyBoots,EnergyLeggings,EnergyChestplate,EnergyHelmet,DarkDust,DarkPower);
+                EnergyShovel,EnergyPickaxe,EnergyBoots,EnergyLeggings,EnergyChestplate,EnergyHelmet,DarkDust,DarkPower,ChaosPower,
+                Entropy);
         Modlog.logger.info("Item is reg");
     }
 }

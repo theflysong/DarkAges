@@ -19,7 +19,8 @@ item.energyBoots.name=能量靴子
 item.energyHelmet.name=能量头盔
 item.energyLeggings.name=能量护腿
 item.energyChestplate.name=能量胸甲
-item.darkDust=黑暗粉尘
+item.darkDust.name=黑暗粉尘
+item.darkPower.name=黑暗力量
 
 tile.crystalOre.name=结晶体矿石
 tile.coreAltar.name=核心祭坛
