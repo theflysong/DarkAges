@@ -16,7 +16,7 @@ public class EntityDarkZombies extends EntityZombie {
 
     @Override
     protected ResourceLocation getLootTable() {
-        return new ResourceLocation(DarkAges.MODID, "entities/DarkZombies");
+        return new ResourceLocation(DarkAges.MODID, "entities/darkzombies");
     }
 
     @Override

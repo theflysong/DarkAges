@@ -19,7 +19,7 @@ public class ItemTextureLoader {
     public void registerItemModels(ModelRegistryEvent event) {
         registerItemModelAll(Crystal,DarkGem,UnfiredCrystal,DarkCore,DeadGem, DeadCore,LifeCore,LifeGem,MagicCore,MagicGem,
                 EnergyIngot,EnergyNugget,EnergyAxe,EnergySword,EnergyHoe, EnergyShovel,EnergyPickaxe,EnergyBoots,EnergyLeggings,
-                EnergyChestplate,EnergyHelmet);
+                EnergyChestplate,EnergyHelmet,DarkDust,DarkPower);
         Modlog.logger.info("Item Texture is Load.");
     }
 

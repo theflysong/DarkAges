@@ -19,6 +19,7 @@ item.energyLeggings.name=Energy Leggings
 item.energyChestplate.name=Energy Chestplate
 item.energyHoe.name=Energy Hoe
 item.energyNugget.name=Energy Nugget
+item.darkDust=Dark Dust
 
 tile.crystalOre.name=Crystal Ore
 tile.coreAltar.name=Core Altar
