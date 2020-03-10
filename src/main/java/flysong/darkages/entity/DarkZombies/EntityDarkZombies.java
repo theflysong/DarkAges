@@ -1,12 +1,14 @@
 package flysong.darkages.entity.DarkZombies;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.monster.EntityZombie;
-import net.minecraft.init.Items;
-import net.minecraft.init.MobEffects;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.text.TextComponentString;
-import net.minecraft.world.World;
+        import flysong.darkages.DarkAges;
+        import net.minecraft.client.Minecraft;
+        import net.minecraft.entity.monster.EntityZombie;
+        import net.minecraft.init.Items;
+        import net.minecraft.init.MobEffects;
+        import net.minecraft.potion.PotionEffect;
+        import net.minecraft.util.ResourceLocation;
+        import net.minecraft.util.text.TextComponentString;
+        import net.minecraft.world.World;
 
 public class EntityDarkZombies extends EntityZombie {
     public EntityDarkZombies(World worldIn)
@@ -16,9 +18,8 @@ public class EntityDarkZombies extends EntityZombie {
     }
 
     @Override
-    protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier) {
-        Minecraft.getMinecraft().player.sendMessage(new TextComponentString("TEST"));
-        this.dropItem(Items.COAL, 1*(this.rand.nextInt(lootingModifier))+2);
+    protected ResourceLocation getLootTable() {
+        return new ResourceLocation("darkages", "entity/DarkZombie");
     }
 
     @Override
