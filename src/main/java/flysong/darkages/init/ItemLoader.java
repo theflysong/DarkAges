@@ -39,6 +39,10 @@ public class ItemLoader {
     public static final Item EnergyPickaxe = new ItemEnergyPickaxe();
     public static final Item EnergyShovel = new ItemEnergyShovel();
     public static final Item EnergyHoe = new ItemEnergyHoe();
+    public static final Item EnergyBoots = new ItemEnergyArmor.Boots();
+    public static final Item EnergyLeggings = new ItemEnergyArmor.Leggings();
+    public static final Item EnergyChestplate = new ItemEnergyArmor.Chestplate();
+    public static final Item EnergyHelmet = new ItemEnergyArmor.Helmet();
 
     public ItemLoader(){
         MinecraftForge.EVENT_BUS.register(this);
@@ -48,7 +52,7 @@ public class ItemLoader {
     public static void Loader(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(Crystal,UnfiredCrystal,DarkGem,DarkCore,DeadGem,DeadCore,LifeGem,LifeCore, MagicGem, MagicCore,
                 ItemCrystalOre,ItemCoreAltar,EnergyIngot,EnergyNugget,ItemEnergyBlock, ItemEnergyOre,EnergyAxe,EnergySword,EnergyHoe,
-                EnergyShovel,EnergyPickaxe);
+                EnergyShovel,EnergyPickaxe,EnergyBoots,EnergyLeggings,EnergyChestplate,EnergyHelmet);
         Modlog.logger.info("Item is reg");
     }
 }

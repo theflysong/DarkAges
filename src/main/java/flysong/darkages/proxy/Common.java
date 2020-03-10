@@ -1,10 +1,7 @@
 package flysong.darkages.proxy;
 
 import flysong.darkages.Modlog;
-import flysong.darkages.init.BlockLoader;
-import flysong.darkages.init.CTLoader;
-import flysong.darkages.init.ItemLoader;
-import flysong.darkages.init.MeltingLoader;
+import flysong.darkages.init.*;
 import flysong.darkages.worldgen.orespawn.oreSpawnLoader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -17,6 +14,7 @@ public class Common {
         new CTLoader(event);
         new BlockLoader();
         new ItemLoader();
+        new EntityLoader();
     }
 
     public void init(FMLInitializationEvent event)

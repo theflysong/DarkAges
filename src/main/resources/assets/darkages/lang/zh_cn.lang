@@ -15,11 +15,17 @@ item.energySword.name=能量剑
 item.energyIngot.name=能量锭
 item.energyHoe.name=能量锄
 item.energyNugget.name=能量粒
+item.energyBoots.name=能量靴子
+item.energyHelmet.name=能量头盔
+item.energyLeggings.name=能量护腿
+item.energyChestplate.name=能量胸甲
 
 tile.crystalOre.name=结晶体矿石
 tile.coreAltar.name=核心祭坛
 tile.energyOre.name=能量矿石
 tile.energyBlock.name=能量块
+
+entity.darkZombie.name=黑暗僵尸
 
 itemGroup.darkAges:Gem=黑暗时代：宝石
 itemGroup.darkAges:Material=黑暗时代：材料

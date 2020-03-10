@@ -1,6 +1,7 @@
 package flysong.darkages.init;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class ToolMaterialLoader {

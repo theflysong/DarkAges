@@ -13,6 +13,10 @@ item.energyPickaxe.name=Energy Pickaxe
 item.energyShovel.name=Energy Shovel
 item.energySword.name=Energy Sword
 item.energyIngot.name=Energy Ingot
+item.energyBoots.name=Energy Boots
+item.energyHelmet.name=Energy Helmet
+item.energyLeggings.name=Energy Leggings
+item.energyChestplate.name=Energy Chestplate
 item.energyHoe.name=Energy Hoe
 item.energyNugget.name=Energy Nugget
 
@@ -20,6 +24,8 @@ tile.crystalOre.name=Crystal Ore
 tile.coreAltar.name=Core Altar
 tile.energyOre.name=Energy Ore
 tile.energyBlock.name=Energy Block
+
+entity.darkZombie.name=Dark Zombie
 
 itemGroup.darkAges:Gem=DarkAges:Gem
 itemGroup.darkAges:Material=DarkAges:Material

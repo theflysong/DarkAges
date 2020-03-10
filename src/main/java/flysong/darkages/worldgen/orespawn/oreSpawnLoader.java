@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class oreSpawnLoader {
 
     public static final WorldGenerator crystal = new WorldOreSpawn(40,-2,new WorldGenMinable(BlockLoader.CrystalOre.getDefaultState(), 6));
-    public static final WorldGenerator energy = new WorldOreSpawn(40,-10,new WorldGenMinable(BlockLoader.EnergyOre.getDefaultState(),10));
+    public static final WorldGenerator energy = new WorldOreSpawn(40,-10,new WorldGenMinable(BlockLoader.EnergyOre.getDefaultState(),4));
 
     public oreSpawnLoader()
     {

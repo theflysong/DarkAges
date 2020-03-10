@@ -2,6 +2,7 @@ package flysong.darkages.proxy;
 
 import flysong.darkages.Modlog;
 import flysong.darkages.init.BlockTextureLoader;
+import flysong.darkages.init.EntityRenderLoader;
 import flysong.darkages.init.ItemTextureLoader;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -15,6 +16,7 @@ public class Client extends Common{
         super.preInit(event);
         new ItemTextureLoader();
         new BlockTextureLoader();
+        new EntityRenderLoader();
     }
     @Override
     public void init(FMLInitializationEvent event)
