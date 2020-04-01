@@ -47,6 +47,7 @@ public class ItemLoader {
     public static final Item EnergyLeggings = new ItemEnergyArmor.Leggings();
     public static final Item EnergyChestplate = new ItemEnergyArmor.Chestplate();
     public static final Item EnergyHelmet = new ItemEnergyArmor.Helmet();
+    public static final Item EnergyLooker = new ItemEnergyLooker();
 
     public ItemLoader(){
         MinecraftForge.EVENT_BUS.register(this);
@@ -57,7 +58,7 @@ public class ItemLoader {
         event.getRegistry().registerAll(Crystal,UnfiredCrystal,DarkGem,DarkCore,DeadGem,DeadCore,LifeGem,LifeCore, MagicGem, MagicCore,
                 ItemCrystalOre,ItemCoreAltar,EnergyIngot,EnergyNugget,ItemEnergyBlock, ItemEnergyOre,EnergyAxe,EnergySword,EnergyHoe,
                 EnergyShovel,EnergyPickaxe,EnergyBoots,EnergyLeggings,EnergyChestplate,EnergyHelmet,DarkDust,DarkPower,ChaosPower,
-                Entropy);
+                Entropy,EnergyLooker);
         Modlog.logger.info("Item is reg");
     }
 }

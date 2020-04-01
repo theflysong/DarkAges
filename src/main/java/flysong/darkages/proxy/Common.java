@@ -15,6 +15,7 @@ public class Common {
         new BlockLoader();
         new ItemLoader();
         new EntityLoader();
+        new CapabilityLoader();
     }
 
     public void init(FMLInitializationEvent event)

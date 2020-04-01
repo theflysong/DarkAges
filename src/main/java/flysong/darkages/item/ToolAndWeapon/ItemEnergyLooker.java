@@ -18,12 +18,16 @@ public class ItemEnergyLooker extends Item {
     {
         super();
         this.setUnlocalizedName("energyLooker");
-        this.setUnlocalizedName("Energy_Looker");
+        this.setRegistryName("Energy_Looker");
         this.setCreativeTab(CTLoader.DarkAgesToolAndWeapon);
     }
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+        if (worldIn.isRemote)
+        {
+            return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, playerIn.getHeldItem(handIn));
+        }
         if(playerIn.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
         {
             playerIn.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).subPlayerEnergy(1);
