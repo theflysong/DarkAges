@@ -27,7 +27,6 @@ public class ItemMagicGem extends BasicGem {
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add(I18n.format(this.getUnlocalizedName() + ".message.1"));
-        OutEnergy(stack,worldIn,tooltip,flagIn);
     }
 
     @Override
@@ -35,7 +34,7 @@ public class ItemMagicGem extends BasicGem {
     {
         super.hitEntity(stack,target,attacker);
         if(Keyboard.isKeyDown(Keyboard.KEY_LCONTROL)){
-            if(getEnergy(stack)>=20){
+            if(getEnergy(attacker)>=20){
                 target.setHealth(target.getHealth()-target.getHealth()*0.9F);
                 if(target.isDead)
                 {
@@ -45,7 +44,6 @@ public class ItemMagicGem extends BasicGem {
             }
             Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format("energy.message.2")));
         }
-        AddEnergy(stack,1);
         return true;
     }
 
@@ -57,11 +55,11 @@ public class ItemMagicGem extends BasicGem {
         {
             return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
         }
-        if(getEnergy(stack)>=20)
+        if(getEnergy(playerIn)>=20)
         {
             playerIn.inventory.addItemStackToInventory(new ItemStack(ItemLoader.UnfiredCrystal,1));
             if (!playerIn.capabilities.isCreativeMode){
-                SubEnergy(stack,20);
+                subEnergy(playerIn,20);
             }
             Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format(this.getUnlocalizedName()+".message.2")));
         }

@@ -29,7 +29,6 @@ public class ItemDeadGem extends BasicGem{
     @Override
     public void addInformation(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
         tooltip.add(I18n.format(this.getUnlocalizedName() + ".message.1"));
-        OutEnergy(stack,worldIn,tooltip,flagIn);
     }
 
     @Override
@@ -37,7 +36,7 @@ public class ItemDeadGem extends BasicGem{
     {
         super.hitEntity(stack,target,attacker);
         if(Keyboard.isKeyDown(Keyboard.KEY_LCONTROL)){
-            if(getEnergy(stack)>=20){
+            if(getEnergy(attacker)>=20){
                 if(target.getHealth()<target.getMaxHealth()/10)
                 {
                     target.setHealth(target.getHealth()-8);
@@ -55,7 +54,6 @@ public class ItemDeadGem extends BasicGem{
             }
             Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format("energy.message.2")));
         }
-        AddEnergy(stack,1);
         return true;
     }
 
@@ -67,11 +65,11 @@ public class ItemDeadGem extends BasicGem{
         {
             return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, stack);
         }
-        if(getEnergy(stack)>=50)
+        if(getEnergy(playerIn)>=50)
         {
             playerIn.inventory.addItemStackToInventory(new ItemStack(Items.SKULL,1,1));
             if (!playerIn.capabilities.isCreativeMode){
-                SubEnergy(stack,50);
+                subEnergy(playerIn,50);
             }
             Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format(this.getUnlocalizedName()+".message.2")));
         }

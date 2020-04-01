@@ -21,6 +21,8 @@ item.energyHoe.name=Energy Hoe
 item.energyNugget.name=Energy Nugget
 item.darkDust.name=Dark Dust
 item.darkPower.name=Dark Power
+item.chaosPower.name=Chaos Power
+item.entropy.name=Entropy
 
 tile.crystalOre.name=Crystal Ore
 tile.coreAltar.name=Core Altar

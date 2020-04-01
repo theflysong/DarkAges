@@ -1,12 +1,15 @@
 package flysong.darkages.item.Gem;
 
+import flysong.darkages.init.CapabilityLoader;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -21,51 +24,50 @@ public abstract class BasicGem extends Item {
         this.setMaxStackSize(1);
     }
 
-    public int getEnergy(ItemStack stack)
-    {
-        if(stack.getTagCompound()==null)
-        {
-            stack.setTagCompound(new NBTTagCompound());
-            NBTTagCompound nbt = new NBTTagCompound();
-            nbt.setInteger("EnergySave", 0);
-            stack.getTagCompound().setTag("Energy", nbt);
-        }
-        NBTTagCompound NBT=stack.getTagCompound();
-        return NBT.getInteger("EnergySave");
-    }
-
-    public void setEnergy(ItemStack stack,int value)
-    {
-        if(stack.getTagCompound()==null)
-        {
-            stack.setTagCompound(new NBTTagCompound());
-            NBTTagCompound nbt = new NBTTagCompound();
-            nbt.setInteger("EnergySave", 0);
-            stack.getTagCompound().setTag("Energy", nbt);
-        }
-        NBTTagCompound NBT=stack.getTagCompound();
-        NBT.setInteger("EnergySave",value);
-    }
-
-    public void AddEnergy(ItemStack stack,int value)
-    {
-        setEnergy(stack,getEnergy(stack)+value);
-    }
-
-    public void SubEnergy(ItemStack stack,int value)
-    {
-        setEnergy(stack,getEnergy(stack)-value);
-    }
 
     @Override
     public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
     {
-        super.hitEntity(stack,target,attacker);
-        return true;
+        addEnergy(attacker,1);
+        return super.hitEntity(stack,target,attacker);
     }
 
-    public void OutEnergy(ItemStack stack, World worldIn, List<String> tooltip, ITooltipFlag flagIn)
+    public int getEnergy(EntityLivingBase player)
     {
-        tooltip.add(I18n.format("energy.message.1")+getEnergy(stack));
+        if(player.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
+        {
+            return player.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).getPlayerEnergy();
+        }
+        return 0;
+    }
+
+    public boolean setEnergy(EntityLivingBase player,int value)
+    {
+        if(player.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
+        {
+            player.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).setPlayerEnergy(value);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean addEnergy(EntityLivingBase player,int value)
+    {
+        if(player.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
+        {
+            player.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).addPlayerEnergy(value);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean subEnergy(EntityLivingBase player,int value)
+    {
+        if(player.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
+        {
+            player.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).subPlayerEnergy(value);
+            return true;
+        }
+        return false;
     }
 }

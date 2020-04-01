@@ -21,6 +21,8 @@ item.energyLeggings.name=能量护腿
 item.energyChestplate.name=能量胸甲
 item.darkDust.name=黑暗粉尘
 item.darkPower.name=黑暗力量
+item.chaosPower.name=混沌力量
+item.entropy.name=熵
 
 tile.crystalOre.name=结晶体矿石
 tile.coreAltar.name=核心祭坛
@@ -44,4 +46,6 @@ item.deadGem.message.2=你获得了凋零骷髅头颅。
 item.lifeGem.message.1=你感觉生命在其中跳动。
 item.lifeGem.message.2=你觉得你更健康了。
 item.magicGem.message.1=魔法在其中跃动。
-item.magicGem.message.2=你获得了未烧制的结晶体。
+EnergyLooker.message.1=目前能量:
+
+item.lifeCore.name-Life Core=item.magicGem.message.2=你获得了未烧制的结晶体。

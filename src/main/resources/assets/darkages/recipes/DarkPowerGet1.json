@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xyx",
+    "y y",
+    "xyx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "darkages:Dark_Dust"
+    },
+    "y":
+    {
+      "item": "darkages:Crystal"
+    }
+  },
+  "result":
+  {
+    "item": "darkages:Dark_Power",
+    "count": 1
+  }
+}

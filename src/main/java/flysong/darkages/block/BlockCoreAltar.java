@@ -1,6 +1,7 @@
 package flysong.darkages.block;
 
 import flysong.darkages.init.CTLoader;
+import flysong.darkages.item.Gem.BasicGem;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -36,26 +37,28 @@ public class BlockCoreAltar extends Block {
         ItemStack stack = playerIn.getHeldItem(hand);
         if(stack.getItem()== DarkGem)
         {
-            if(stack.getTagCompound().getInteger("EnergySave")>=100)
+            if(((BasicGem)stack.getItem()).getEnergy(playerIn)>=100)
             {
                 playerIn.inventory.addItemStackToInventory(new ItemStack(DarkCore,1));
                 if (!playerIn.capabilities.isCreativeMode)
                 {
                     stack.setCount(stack.getCount()-1);
+                    ((BasicGem)stack.getItem()).subEnergy(playerIn,100);
                 }
                 playerIn.setHeldItem(hand,stack);
                 return true;
             }
             Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format("energy.message.2")));
         }
-        else if(stack.getItem()== DeadGem)
+        else if(stack.getItem() == DeadGem)
         {
-            if(stack.getTagCompound().getInteger("EnergySave")>=100)
+            if(((BasicGem)stack.getItem()).getEnergy(playerIn)>=100)
             {
                 playerIn.inventory.addItemStackToInventory(new ItemStack(DeadCore,1));
                 if (!playerIn.capabilities.isCreativeMode)
                 {
                     stack.setCount(stack.getCount()-1);
+                    ((BasicGem)stack.getItem()).subEnergy(playerIn,100);
                 }
                 playerIn.setHeldItem(hand,stack);
                 return true;
@@ -64,7 +67,7 @@ public class BlockCoreAltar extends Block {
         }
         else if(stack.getItem()== LifeGem)
         {
-            if(stack.getTagCompound().getInteger("EnergySave")>=100)
+            if(((BasicGem)stack.getItem()).getEnergy(playerIn)>=100)
             {
                 playerIn.inventory.addItemStackToInventory(new ItemStack(LifeCore,1));
                 if (!playerIn.capabilities.isCreativeMode)
@@ -78,12 +81,13 @@ public class BlockCoreAltar extends Block {
         }
         else if(stack.getItem()== MagicGem)
         {
-            if(stack.getTagCompound().getInteger("EnergySave")>=100)
+            if(((BasicGem)stack.getItem()).getEnergy(playerIn)>=100)
             {
                 playerIn.inventory.addItemStackToInventory(new ItemStack(MagicCore,1));
                 if (!playerIn.capabilities.isCreativeMode)
                 {
                     stack.setCount(stack.getCount()-1);
+                    ((BasicGem)stack.getItem()).subEnergy(playerIn,100);
                 }
                 playerIn.setHeldItem(hand,stack);
                 return true;

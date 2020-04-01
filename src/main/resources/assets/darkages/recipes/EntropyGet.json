@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xyx",
+    "y y",
+    "xyx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "darkages:Chaos_Power"
+    },
+    "y":
+    {
+      "item": "darkages:Magic_Core"
+    }
+  },
+  "result":
+  {
+    "item": "darkages:Entropy",
+    "count": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xyx",
+    "y y",
+    "xyx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "darkages:Dark_Power"
+    },
+    "y":
+    {
+      "item": "darkages:Energy_Ingot"
+    }
+  },
+  "result":
+  {
+    "item": "darkages:Chaos_Power",
+    "count": 1
+  }
+}

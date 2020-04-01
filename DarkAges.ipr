@@ -24,6 +24,13 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/resources/assets/flysong/lang/zh_cn.lang" charset="GBK" />
   </component>
+  <component name="EntryPointsManager">
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="net.minecraftforge.fml.common.Mod" />
+      <item index="1" class="java.lang.String" itemvalue="net.minecraftforge.fml.common.Mod.EventHandler" />
+      <item index="2" class="java.lang.String" itemvalue="net.minecraftforge.fml.common.eventhandler.SubscribeEvent" />
+    </list>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
