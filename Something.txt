@@ -1,0 +1,21 @@
+I18n.format(String)
+翻译文字,String就是翻译秘钥
+比如I18n.format("233.233")
+语言文件:
+233.233=233
+得到的结果就是233
+
+player.sendMessgae(new TextComponentString(String))
+发生消息给player
+
+Minecraft.getMinecraft().getPlayer().sendMessgae(new TextComponentString(String))
+给全部玩家发消息
+
+entity.addPotionEffect(new PotionEffect(Effect,time,level))
+给实体添加效果
+
+if(entity.isDead)
+{
+	entity.onDeath(DamageSource);
+}
+如果你使用命令使生物死亡，请用这个来使生物掉落物品

@@ -23,6 +23,10 @@ item.darkDust.name=黑暗粉尘
 item.darkPower.name=黑暗力量
 item.chaosPower.name=混沌力量
 item.entropy.name=熵
+item.energyLooker.name=能量探测器
+item.viewSoul.name=视野之魂
+item.flySoul.name=飞翔之魂
+item.powerSoul.name=力量之魂
 
 tile.crystalOre.name=结晶体矿石
 tile.coreAltar.name=核心祭坛
@@ -35,6 +39,7 @@ itemGroup.darkAges:Gem=黑暗时代：宝石
 itemGroup.darkAges:Material=黑暗时代：材料
 itemGroup.darkAges:Block=黑暗时代：方块
 itemGroup.darkAges:ToolAndWeapon=黑暗时代：工具与武器
+itemGroup.darkAges:Souls=黑暗时代：灵魂
 
 energy.message.1=能量值：
 energy.message.2=你没有足够的能量。
@@ -47,5 +52,4 @@ item.lifeGem.message.1=你感觉生命在其中跳动。
 item.lifeGem.message.2=你觉得你更健康了。
 item.magicGem.message.1=魔法在其中跃动。
 EnergyLooker.message.1=目前能量:
-
-item.lifeCore.name-Life Core=item.magicGem.message.2=你获得了未烧制的结晶体。
+item.magicGem.message.2=你获得了未烧制的结晶体。

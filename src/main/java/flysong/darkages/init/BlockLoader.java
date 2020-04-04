@@ -3,15 +3,20 @@ package flysong.darkages.init;
 import flysong.darkages.DarkAges;
 import flysong.darkages.Modlog;
 import flysong.darkages.block.*;
+import flysong.darkages.block.tileEntity.TileEntityEnergyAlternator;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod.EventBusSubscriber(modid = DarkAges.MODID)
+import static flysong.darkages.DarkAges.MODID;
+
+@Mod.EventBusSubscriber(modid = MODID)
 public class BlockLoader {
 
     public static final Block CrystalOre = new BlockCrystalOre();
@@ -27,6 +32,8 @@ public class BlockLoader {
     @SubscribeEvent
     public static void Loader(RegistryEvent.Register<Block> event) {
         event.getRegistry().registerAll(CrystalOre,CoreAltar,EnergyBlock,EnergyOre);
+
+        GameRegistry.registerTileEntity(TileEntityEnergyAlternator.class, new ResourceLocation(MODID+":"+"Energy_Alternator"));
         Modlog.logger.info("Block is reg.");
     }
 }

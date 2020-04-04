@@ -28,7 +28,7 @@ public class BlockCrystalOre extends BasicBlock {
 
     @Override
     public int quantityDropped(Random random) {
-        return 2;
+        return 1;
     }
 
     @Override

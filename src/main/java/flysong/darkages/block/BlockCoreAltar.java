@@ -19,15 +19,12 @@ import net.minecraft.world.World;
 
 import static flysong.darkages.init.ItemLoader.*;
 
-public class BlockCoreAltar extends Block {
+public class BlockCoreAltar extends BasicBlock {
     public BlockCoreAltar()
     {
-        super(Material.ROCK, MapColor.STONE);
-        this.setSoundType(SoundType.STONE);
+        super(Material.ROCK, SoundType.STONE,"coreAltar","Core_Altar");
         this.setHardness(50.5F);
         this.setHarvestLevel("pickaxe", 3);
-        this.setUnlocalizedName("coreAltar");
-        this.setRegistryName("Core_Altar");
         this.setCreativeTab(CTLoader.DarkAgesBlock);
         this.setLightLevel(1.0F);
     }

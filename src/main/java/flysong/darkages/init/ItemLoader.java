@@ -3,6 +3,7 @@ package flysong.darkages.init;
 import flysong.darkages.DarkAges;
 import flysong.darkages.Modlog;
 import flysong.darkages.item.Gem.*;
+import flysong.darkages.item.ItemEnergyIngot;
 import flysong.darkages.item.ToolAndWeapon.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -21,7 +22,7 @@ public class ItemLoader {
     public static final Item DeadCore = new Item().setUnlocalizedName("deadCore").setRegistryName("Dead_Core").setCreativeTab(DarkAgesGem);
     public static final Item MagicCore = new Item().setUnlocalizedName("magicCore").setRegistryName("Magic_Core").setCreativeTab(DarkAgesGem);
     public static final Item LifeCore = new Item().setUnlocalizedName("lifeCore").setRegistryName("Life_Core").setCreativeTab(DarkAgesGem);
-    public static final Item EnergyIngot = new Item().setUnlocalizedName("energyIngot").setRegistryName("Energy_Ingot").setCreativeTab(DarkAgesMater);
+    public static final Item EnergyIngot = new ItemEnergyIngot();
     public static final Item EnergyNugget = new Item().setUnlocalizedName("energyNugget").setRegistryName("Energy_Nugget").setCreativeTab(DarkAgesMater);
     public static final Item DarkDust = new Item().setUnlocalizedName("darkDust").setRegistryName("Dark_Dust").setCreativeTab(DarkAgesMater);
     public static final Item DarkPower = new Item().setUnlocalizedName("darkPower").setRegistryName("Dark_Power").setCreativeTab(DarkAgesMater);
