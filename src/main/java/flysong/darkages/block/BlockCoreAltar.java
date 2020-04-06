@@ -2,6 +2,7 @@ package flysong.darkages.block;
 
 import flysong.darkages.init.CTLoader;
 import flysong.darkages.item.Gem.BasicGem;
+import flysong.darkages.utils.BasicBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
@@ -22,11 +23,8 @@ import static flysong.darkages.init.ItemLoader.*;
 public class BlockCoreAltar extends BasicBlock {
     public BlockCoreAltar()
     {
-        super(Material.ROCK, SoundType.STONE,"coreAltar","Core_Altar");
-        this.setHardness(50.5F);
-        this.setHarvestLevel("pickaxe", 3);
-        this.setCreativeTab(CTLoader.DarkAgesBlock);
-        this.setLightLevel(1.0F);
+        super(Material.ROCK, "Core_Altar","coreAltar",CTLoader.DarkAgesBlock,SoundType.ANVIL,"pickaxe",3,0.3f,20.5f);
+        addIt();
     }
 
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)

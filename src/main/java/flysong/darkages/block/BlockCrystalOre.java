@@ -2,6 +2,7 @@ package flysong.darkages.block;
 
 import flysong.darkages.init.CTLoader;
 import flysong.darkages.init.ItemLoader;
+import flysong.darkages.utils.BasicBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -15,10 +16,8 @@ import java.util.Random;
 public class BlockCrystalOre extends BasicBlock {
     public BlockCrystalOre()
     {
-        super(Material.ROCK, SoundType.STONE,"crystalOre","Crystal_Ore");
-        this.setDigLevel("pickaxe",2);
-        this.setHardness(10.5F);
-        this.setCreativeTab(CTLoader.DarkAgesBlock);
+        super(Material.ROCK, "Crystal_Ore","crystalOre",CTLoader.DarkAgesBlock,SoundType.STONE,"pickaxe",2,10.5f);
+        addIt();
     }
 
     @Override

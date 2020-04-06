@@ -2,6 +2,7 @@ package flysong.darkages.item.Gem;
 
 import flysong.darkages.init.CTLoader;
 import flysong.darkages.init.ItemLoader;
+import flysong.darkages.utils.Registry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
@@ -22,6 +23,7 @@ public class ItemMagicGem extends BasicGem {
     public ItemMagicGem()
     {
         super("magicGem","Magic_Gem", CTLoader.DarkAgesGem);
+        addIt();
     }
 
     @Override

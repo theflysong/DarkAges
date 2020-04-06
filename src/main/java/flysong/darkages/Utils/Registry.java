@@ -4,20 +4,20 @@ import flysong.darkages.DarkAges;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Mod.EventBusSubscriber(modid = DarkAges.MODID)
 public class Registry {
-    public static List<Item> ItemRegistryList;
-    public static List<Item> ItemBlockRegistryList;
-    public static List<Block> BlockRegistryList;
+    public static List<Item> ItemRegistryList = new ArrayList();
+    public static List<Item> ItemBlockRegistryList = new ArrayList();
+    public static List<Block> BlockRegistryList = new ArrayList();
 
     @SubscribeEvent
     public static void ItemRegistry(RegistryEvent.Register<Item> event)

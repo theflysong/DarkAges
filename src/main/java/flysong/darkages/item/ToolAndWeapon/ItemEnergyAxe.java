@@ -2,6 +2,7 @@ package flysong.darkages.item.ToolAndWeapon;
 
 import flysong.darkages.init.CTLoader;
 import flysong.darkages.init.ToolMaterialLoader;
+import flysong.darkages.utils.Registry;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -20,6 +21,7 @@ public class ItemEnergyAxe extends ItemAxe {
         this.setUnlocalizedName("energyAxe");
         this.setRegistryName("Energy_Axe");
         this.setCreativeTab(CTLoader.DarkAgesToolAndWeapon);
+        Registry.ItemRegistryList.add(this);
     }
 
     private int AddDamageNum = 3;

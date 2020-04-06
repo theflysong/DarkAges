@@ -1,10 +1,27 @@
 package flysong.darkages.block.tileEntity;
 
-import net.minecraft.tileentity.TileEntity;
+import flysong.darkages.interfaces.IFuel;
 
-import java.util.HashMap;
+public class TileEntityEnergyAlternator extends TileEntityEnergyMachine implements IFuel {
+    private int fuel = 0;
 
-public class TileEntityEnergyAlternator extends TileEntity {
-    public int time;
-    public static HashMap<String, Integer> ItemTime = new HashMap<String,Integer>();
+    @Override
+    public int getFuel() {
+        return fuel;
+    }
+
+    @Override
+    public void setFuel(int fuel) {
+        this.fuel=fuel;
+    }
+
+    @Override
+    public void addFuel(int fuel) {
+        this.fuel+=fuel;
+    }
+
+    @Override
+    public void subFuel(int fuel) {
+        this.fuel-=fuel;
+    }
 }

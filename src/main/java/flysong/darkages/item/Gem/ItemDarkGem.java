@@ -2,6 +2,7 @@ package flysong.darkages.item.Gem;
 
 import flysong.darkages.init.CTLoader;
 import flysong.darkages.init.ItemLoader;
+import flysong.darkages.utils.Registry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
@@ -9,21 +10,21 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.*;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import org.lwjgl.input.Keyboard;
 
 import java.util.List;
 
-import net.minecraft.util.DamageSource;
-
 public class ItemDarkGem extends BasicGem{
     public ItemDarkGem()
     {
         super("darkGem","Dark_Gem", CTLoader.DarkAgesGem);
+        addIt();
+
     }
 
     @Override

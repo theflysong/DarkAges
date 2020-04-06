@@ -2,6 +2,7 @@ package flysong.darkages.item.ToolAndWeapon;
 
 import flysong.darkages.init.ArmorMaterialLoader;
 import flysong.darkages.init.CTLoader;
+import flysong.darkages.utils.Registry;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 
@@ -12,6 +13,7 @@ public class ItemEnergyArmor extends ItemArmor {
         this.setCreativeTab(CTLoader.DarkAgesToolAndWeapon);
         this.setUnlocalizedName(UnlocalizedName);
         this.setRegistryName(RegistryName);
+        Registry.ItemRegistryList.add(this);
     }
 
     public static class Boots extends ItemEnergyArmor{

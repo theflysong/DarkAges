@@ -1,17 +1,15 @@
 package flysong.darkages.item;
 
-import flysong.darkages.block.tileEntity.TileEntityEnergyAlternator;
-import net.minecraft.item.Item;
+import flysong.darkages.block.tileEntity.TileEntityEnergyMachine;
+import flysong.darkages.utils.BasicItem;
 
 import static flysong.darkages.init.CTLoader.DarkAgesMater;
 
-public class ItemEnergyIngot extends Item {
+public class ItemEnergyIngot extends BasicItem {
     public ItemEnergyIngot()
     {
-        super();
-        this.setUnlocalizedName("energyIngot");
-        this.setRegistryName("Energy_Ingot");
-        this.setCreativeTab(DarkAgesMater);
-        TileEntityEnergyAlternator.ItemTime.put(this.getRegistryName().getResourcePath(),2);
+        super("Energy_Ingot","energyIngot",DarkAgesMater);
+        TileEntityEnergyMachine.ItemEnergy.put(this.getRegistryName().getResourcePath(),20);
+        addIt();
     }
 }

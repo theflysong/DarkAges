@@ -1,6 +1,7 @@
 package flysong.darkages.item.Gem;
 
 import flysong.darkages.init.CapabilityLoader;
+import flysong.darkages.utils.BasicItem;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
@@ -14,13 +15,10 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public abstract class BasicGem extends Item {
-    public BasicGem(String UnName, String RegName, CreativeTabs Tabs)
+public abstract class BasicGem extends BasicItem {
+    public BasicGem(String unlocalizedName, String registryName, CreativeTabs Tabs)
     {
-        super();
-        this.setUnlocalizedName(UnName);
-        this.setRegistryName(RegName);
-        this.setCreativeTab(Tabs);
+        super(registryName, unlocalizedName, Tabs);
         this.setMaxStackSize(1);
     }
 
@@ -36,7 +34,7 @@ public abstract class BasicGem extends Item {
     {
         if(player.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
         {
-            return player.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).getPlayerEnergy();
+            return player.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).getEnergy();
         }
         return 0;
     }
@@ -45,7 +43,7 @@ public abstract class BasicGem extends Item {
     {
         if(player.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
         {
-            player.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).setPlayerEnergy(value);
+            player.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).setEnergy(value);
             return true;
         }
         return false;
@@ -55,7 +53,7 @@ public abstract class BasicGem extends Item {
     {
         if(player.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
         {
-            player.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).addPlayerEnergy(value);
+            player.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).addEnergy(value);
             return true;
         }
         return false;
@@ -65,7 +63,7 @@ public abstract class BasicGem extends Item {
     {
         if(player.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
         {
-            player.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).subPlayerEnergy(value);
+            player.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).subEnergy(value);
             return true;
         }
         return false;

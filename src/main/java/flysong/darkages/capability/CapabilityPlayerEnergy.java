@@ -1,6 +1,7 @@
 package flysong.darkages.capability;
 
 import flysong.darkages.init.CapabilityLoader;
+import flysong.darkages.interfaces.IEnergyBase;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagInt;
@@ -9,52 +10,52 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilitySerializable;
 
 public class CapabilityPlayerEnergy {
-    public static class Storage implements Capability.IStorage<IPlayerEnergy> {
+    public static class Storage implements Capability.IStorage<IEnergyBase> {
         @Override
-        public NBTBase writeNBT(Capability<IPlayerEnergy> capability, IPlayerEnergy instance, EnumFacing side) {
-            return new NBTTagInt(instance.getPlayerEnergy());
+        public NBTBase writeNBT(Capability<IEnergyBase> capability, IEnergyBase instance, EnumFacing side) {
+            return new NBTTagInt(instance.getEnergy());
         }
 
         @Override
-        public void readNBT(Capability<IPlayerEnergy> capability, IPlayerEnergy instance, EnumFacing side, NBTBase nbt) {
-            instance.setPlayerEnergy(((NBTTagInt)nbt).getInt());
+        public void readNBT(Capability<IEnergyBase> capability, IEnergyBase instance, EnumFacing side, NBTBase nbt) {
+            instance.setEnergy(((NBTTagInt)nbt).getInt());
         }
     }
 
-    public static class PlayerEnergy implements IPlayerEnergy
+    public static class PlayerEnergy implements IEnergyBase
     {
         private int energy=0;
 
         @Override
-        public int getPlayerEnergy() {
+        public int getEnergy() {
             return energy;
         }
 
         @Override
-        public void addPlayerEnergy(int num) {
+        public void addEnergy(int num) {
             energy+=num;
         }
 
         @Override
-        public void resetPlayerEnergy() {
+        public void resetEnergy() {
             energy=0;
         }
 
         @Override
-        public void subPlayerEnergy(int num) {
+        public void subEnergy(int num) {
             energy-=num;
         }
 
         @Override
-        public void setPlayerEnergy(int num) {
+        public void setEnergy(int num) {
             energy=num;
         }
     }
 
     public static class ProviderPlayer implements ICapabilitySerializable<NBTTagCompound>
     {
-        private IPlayerEnergy Energy = new PlayerEnergy();
-        private Capability.IStorage<IPlayerEnergy> storage = CapabilityLoader.playerEnergy.getStorage();
+        private IEnergyBase Energy = new PlayerEnergy();
+        private Capability.IStorage<IEnergyBase> storage = CapabilityLoader.playerEnergy.getStorage();
 
         @Override
         public boolean hasCapability(Capability<?> capability, EnumFacing facing)
@@ -78,14 +79,14 @@ public class CapabilityPlayerEnergy {
         public NBTTagCompound serializeNBT()
         {
             NBTTagCompound compound = new NBTTagCompound();
-            compound.setTag("Energy", storage.writeNBT(CapabilityLoader.playerEnergy, Energy, null));
+            compound.setTag("energy", storage.writeNBT(CapabilityLoader.playerEnergy, Energy, null));
             return compound;
         }
 
         @Override
         public void deserializeNBT(NBTTagCompound compound)
         {
-            NBTBase energy = compound.getTag("Energy");
+            NBTBase energy = compound.getTag("energy");
             storage.readNBT(CapabilityLoader.playerEnergy, Energy, null, energy);
         }
     }

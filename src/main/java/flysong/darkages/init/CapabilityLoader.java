@@ -2,7 +2,7 @@ package flysong.darkages.init;
 
 import flysong.darkages.DarkAges;
 import flysong.darkages.capability.CapabilityPlayerEnergy;
-import flysong.darkages.capability.IPlayerEnergy;
+import flysong.darkages.interfaces.IEnergyBase;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
@@ -22,12 +22,12 @@ public class CapabilityLoader {
         registerCapability();
     }
 
-    @CapabilityInject(IPlayerEnergy.class)
-    public static Capability<IPlayerEnergy> playerEnergy;
+    @CapabilityInject(IEnergyBase.class)
+    public static Capability<IEnergyBase> playerEnergy;
 
     public void registerCapability()
     {
-        CapabilityManager.INSTANCE.register(IPlayerEnergy.class, new CapabilityPlayerEnergy.Storage(), CapabilityPlayerEnergy.PlayerEnergy.class);
+        CapabilityManager.INSTANCE.register(IEnergyBase.class, new CapabilityPlayerEnergy.Storage(), CapabilityPlayerEnergy.PlayerEnergy.class);
     }
 
     @SubscribeEvent
