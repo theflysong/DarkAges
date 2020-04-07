@@ -35,6 +35,7 @@ public class ItemDarkGem extends BasicGem{
     @Override
     public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
     {
+
         super.hitEntity(stack,target,attacker);
         if(Keyboard.isKeyDown(Keyboard.KEY_LCONTROL)){
             if(getEnergy(attacker)>=20){
