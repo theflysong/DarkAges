@@ -3,6 +3,8 @@ package flysong.darkages.block;
 import flysong.darkages.init.CTLoader;
 import flysong.darkages.init.ItemLoader;
 import flysong.darkages.utils.BasicBlock;
+import net.minecraft.block.BlockRedstoneComparator;
+import net.minecraft.block.BlockTNT;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -12,6 +14,8 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import java.util.Random;
+
+
 
 public class BlockCrystalOre extends BasicBlock {
     public BlockCrystalOre()

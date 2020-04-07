@@ -60,7 +60,11 @@ public class BasicBlock extends Block {
     }
 
     public BasicBlock(Material blockMaterialIn) {
-        this(blockMaterialIn, "","",null,SoundType.STONE);
+        super(blockMaterialIn);
+    }
+
+    public BasicBlock(Material blockMaterialIn,MapColor blockMapColorIn) {
+        super(blockMaterialIn,blockMapColorIn);
     }
 
     public BasicBlock addIt()

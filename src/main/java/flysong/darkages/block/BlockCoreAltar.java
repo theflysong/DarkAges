@@ -1,6 +1,7 @@
 package flysong.darkages.block;
 
 import flysong.darkages.init.CTLoader;
+import flysong.darkages.init.CapabilityLoader;
 import flysong.darkages.item.Gem.BasicGem;
 import flysong.darkages.utils.BasicBlock;
 import net.minecraft.block.Block;
@@ -32,65 +33,71 @@ public class BlockCoreAltar extends BasicBlock {
         ItemStack stack = playerIn.getHeldItem(hand);
         if(stack.getItem()== DarkGem)
         {
-            if(((BasicGem)stack.getItem()).getEnergy(playerIn)>=100)
+            if(playerIn.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
             {
-                playerIn.inventory.addItemStackToInventory(new ItemStack(DarkCore,1));
-                if (!playerIn.capabilities.isCreativeMode)
-                {
-                    stack.setCount(stack.getCount()-1);
-                    ((BasicGem)stack.getItem()).subEnergy(playerIn,100);
+                if(playerIn.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).getEnergy()>=100) {
+                    playerIn.inventory.addItemStackToInventory(new ItemStack(DarkCore,1));
+                    if (!playerIn.capabilities.isCreativeMode)
+                    {
+                        stack.setCount(stack.getCount()-1);
+                        playerIn.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).subEnergy(100);
+                    }
+                    playerIn.setHeldItem(hand,stack);
+                    return true;
                 }
-                playerIn.setHeldItem(hand,stack);
-                return true;
             }
-            Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format("energy.message.2")));
         }
         else if(stack.getItem() == DeadGem)
         {
-            if(((BasicGem)stack.getItem()).getEnergy(playerIn)>=100)
+            if(playerIn.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
             {
-                playerIn.inventory.addItemStackToInventory(new ItemStack(DeadCore,1));
-                if (!playerIn.capabilities.isCreativeMode)
-                {
-                    stack.setCount(stack.getCount()-1);
-                    ((BasicGem)stack.getItem()).subEnergy(playerIn,100);
+                if(playerIn.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).getEnergy()>=100) {
+                    playerIn.inventory.addItemStackToInventory(new ItemStack(DeadCore,1));
+                    if (!playerIn.capabilities.isCreativeMode)
+                    {
+                        stack.setCount(stack.getCount()-1);
+                        playerIn.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).subEnergy(100);
+                    }
+                    playerIn.setHeldItem(hand,stack);
+                    return true;
                 }
-                playerIn.setHeldItem(hand,stack);
-                return true;
             }
-            Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format("energy.message.2")));
         }
         else if(stack.getItem()== LifeGem)
         {
-            if(((BasicGem)stack.getItem()).getEnergy(playerIn)>=100)
+            if(playerIn.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
             {
-                playerIn.inventory.addItemStackToInventory(new ItemStack(LifeCore,1));
-                if (!playerIn.capabilities.isCreativeMode)
-                {
-                    stack.setCount(stack.getCount()-1);
+                if(playerIn.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).getEnergy()>=100) {
+                    playerIn.inventory.addItemStackToInventory(new ItemStack(LifeCore,1));
+                    if (!playerIn.capabilities.isCreativeMode)
+                    {
+                        stack.setCount(stack.getCount()-1);
+                        playerIn.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).subEnergy(100);
+                    }
+                    playerIn.setHeldItem(hand,stack);
+                    return true;
                 }
-                playerIn.setHeldItem(hand,stack);
-                return true;
             }
-            Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format("energy.message.2")));
+
         }
         else if(stack.getItem()== MagicGem)
         {
-            if(((BasicGem)stack.getItem()).getEnergy(playerIn)>=100)
+            if(playerIn.hasCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST))
             {
-                playerIn.inventory.addItemStackToInventory(new ItemStack(MagicCore,1));
-                if (!playerIn.capabilities.isCreativeMode)
-                {
-                    stack.setCount(stack.getCount()-1);
-                    ((BasicGem)stack.getItem()).subEnergy(playerIn,100);
+                if(playerIn.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).getEnergy()>=100) {
+                    playerIn.inventory.addItemStackToInventory(new ItemStack(MagicCore,1));
+                    if (!playerIn.capabilities.isCreativeMode)
+                    {
+                        stack.setCount(stack.getCount()-1);
+                        playerIn.getCapability(CapabilityLoader.playerEnergy, EnumFacing.EAST).subEnergy(100);
+                    }
+                    playerIn.setHeldItem(hand,stack);
+                    return true;
                 }
-                playerIn.setHeldItem(hand,stack);
-                return true;
             }
-            Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format("energy.message.2")));
         }
+        Minecraft.getMinecraft().player.sendMessage(new TextComponentString(I18n.format("energy.message.2")));
         playerIn.setHeldItem(hand,stack);
-
-        return true;
+        return false;
     }
 }

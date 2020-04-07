@@ -2,6 +2,7 @@ package flysong.darkages.init;
 
 import flysong.darkages.item.Gem.*;
 import flysong.darkages.item.ItemEnergyIngot;
+import flysong.darkages.item.Soul.ItemFlySouls;
 import flysong.darkages.item.ToolAndWeapon.*;
 import flysong.darkages.utils.BasicItem;
 import net.minecraft.item.Item;
@@ -26,6 +27,7 @@ public class ItemLoader {
     public static final Item DeadGem = new ItemDeadGem();
     public static final Item MagicGem = new ItemMagicGem();
     public static final Item LifeGem = new ItemLifeGem();
+    public static final Item FlySouls = new ItemFlySouls();
 
     public static final Item EnergyAxe = new ItemEnergyAxe();
     public static final Item EnergySword = new ItemEnergySword();
